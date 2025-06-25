@@ -13,51 +13,62 @@ import com.jeu.endlessrunner.R;
 
 public class Floor implements IGameObject {
 
-    private final int WIDTH = 100;
-    private final int Y_COORDINATE = Constants.SCREEN_HEIGHT - 50;
+    // Largeur de votre image complète de route
+    private final int WIDTH = Constants.SCREEN_WIDTH;
+    private final int Y_COORDINATE = Constants.SCREEN_HEIGHT - 300;
 
     private Rect mRect;
 
     private List<Rect> mRectList;
     private Bitmap mFloorImage;
 
-    public Floor(Rect rect){
+    public Floor(Rect rect) {
         mRect = rect;
         mRect.set(0, Y_COORDINATE, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
 
         BitmapFactory bf = new BitmapFactory();
-        mFloorImage = bf.decodeResource(Constants.CURRENT_CONTEXT.getResources(), R.drawable.floor);
+        mFloorImage = bf.decodeResource(Constants.CURRENT_CONTEXT.getResources(), R.drawable.route);
 
         mRectList = new ArrayList<>();
-        for(int i = 0; i < Constants.SCREEN_WIDTH + (Constants.SCREEN_WIDTH/ 2); i += WIDTH){
-            mRectList.add(new Rect(i, Y_COORDINATE, i + WIDTH, Constants.SCREEN_HEIGHT));
-        }
+
+        // Créer seulement 2 instances de votre route complète pour l'effet de
+        // défilement
+        // Une à l'écran, une autre qui arrive
+        mRectList.add(new Rect(0, Y_COORDINATE, WIDTH, Constants.SCREEN_HEIGHT));
+        mRectList.add(new Rect(WIDTH, Y_COORDINATE, WIDTH * 2, Constants.SCREEN_HEIGHT));
     }
 
     @Override
     public void draw(Canvas canvas) {
-        for(Rect rect : mRectList){
-            canvas.drawBitmap(mFloorImage, null, rect, new Paint());
+        Paint paint = new Paint();
+        paint.setFilterBitmap(true); // Lissage de l'image
+
+        for (Rect rect : mRectList) {
+            canvas.drawBitmap(mFloorImage, null, rect, paint);
         }
     }
 
     @Override
     public void update() {
-        for(Rect rect : mRectList){
-            rect.set(rect.left - (int)Constants.SPEED, Y_COORDINATE, rect.right - (int)Constants.SPEED, Constants.SCREEN_HEIGHT);
+        // Parallax scrolling - ajustez le multiplicateur selon vos préférences
+        float parallaxSpeed = Constants.SPEED * 1.2f;
+
+        for (Rect rect : mRectList) {
+            rect.set(rect.left - (int) parallaxSpeed, Y_COORDINATE,
+                    rect.right - (int) parallaxSpeed, Constants.SCREEN_HEIGHT);
         }
 
-        //If a rect has passed the screen, puts it back in the loop again.
-        if(mRectList.get(0).right <= 0){
+        // Quand la première route sort complètement de l'écran,
+        // on la remet à la fin pour créer la boucle infinie
+        if (mRectList.get(0).right <= 0) {
             Rect rect = mRectList.remove(0);
             int x = mRectList.get(mRectList.size() - 1).right;
             rect.set(x, Y_COORDINATE, x + WIDTH, Constants.SCREEN_HEIGHT);
             mRectList.add(rect);
-
         }
     }
 
-    public Rect getRect(){
+    public Rect getRect() {
         return mRect;
     }
 }

@@ -15,7 +15,7 @@ public class Obstacle implements IGameObject {
 
     private Bitmap mImage;
 
-    public Obstacle(int rectHeight, int obstacleWidth, int startX, int startY, int color){
+    public Obstacle(int rectHeight, int obstacleWidth, int startX, int startY, int color) {
         mRect = new Rect(startX, startY, startX + obstacleWidth, startY + rectHeight);
         mColor = color;
 
@@ -25,9 +25,9 @@ public class Obstacle implements IGameObject {
 
     @Override
     public void draw(Canvas canvas) {
-//        Paint paint = new Paint();
-//        paint.setColor(mColor);
-//        canvas.drawRect(mRect, paint);
+        // Paint paint = new Paint();
+        // paint.setColor(mColor);
+        // canvas.drawRect(mRect, paint);
         canvas.drawBitmap(mImage, null, mRect, new Paint());
     }
 
@@ -38,23 +38,25 @@ public class Obstacle implements IGameObject {
 
     /**
      * Moves the obstacle from right to left with the given speed.
+     * 
      * @param speed
      */
-    public void move(float speed){
+    public void move(float speed) {
         mRect.left -= speed;
         mRect.right -= speed;
     }
 
-    public Rect getRect(){
+    public Rect getRect() {
         return mRect;
     }
 
     /**
      * Checks if the obstacle intersects with the player.
+     * 
      * @param playerRect
      * @return
      */
-    public boolean collisionWithPlayer(Rect playerRect){
+    public boolean collisionWithPlayer(Rect playerRect) {
         return mRect.intersects(playerRect.left, playerRect.top, playerRect.right, playerRect.bottom);
     }
 }

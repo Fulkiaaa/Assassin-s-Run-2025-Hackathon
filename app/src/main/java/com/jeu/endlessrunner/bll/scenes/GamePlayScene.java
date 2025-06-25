@@ -15,7 +15,7 @@ import com.jeu.endlessrunner.be.Floor;
 import com.jeu.endlessrunner.be.PauseButton;
 import com.jeu.endlessrunner.be.Player;
 import com.jeu.endlessrunner.bll.IScene;
-import com.jeu.endlessrunner.bll.managers.CloudManager;
+import com.jeu.endlessrunner.bll.managers.BirdManager;
 import com.jeu.endlessrunner.bll.managers.GravityManager;
 import com.jeu.endlessrunner.bll.managers.HealthManager;
 import com.jeu.endlessrunner.bll.managers.ObstacleManager;
@@ -29,8 +29,8 @@ public class GamePlayScene implements IScene {
 
     private GravityManager mGravityManager;
     private ObstacleManager mObstacleManager;
+    private BirdManager mBirdManager; // NOUVEAU
     private HealthManager mHealthManager;
-    private CloudManager mCloudManager;
 
     private Rect mTextRect;
 
@@ -66,12 +66,17 @@ public class GamePlayScene implements IScene {
         if (!mGameOver && !mIsPaused) {
             mPlayer.update(mPlayerPoint, mIsJumping);
             mFloor.update();
-            // mCloudManager.update();
 
             playerGravity();
             checkCollisionObstacle();
+            checkCollisionBird();
 
             mObstacleManager.update();
+
+            // Active et met à jour les oiseaux
+            mBirdManager.setActive(mScore);
+            mBirdManager.update();
+
             if (mHealthManager.update(mAmountOfDamage)) {
                 mGameOver = true;
             }
@@ -93,22 +98,33 @@ public class GamePlayScene implements IScene {
     }
 
     /**
+     * NOUVEAU - If the player is colliding with a bird, increase amountOfDamage.
+     */
+    private void checkCollisionBird() {
+        if (mBirdManager.collisionWithPlayer(mPlayer.getRect())) {
+            mAmountOfDamage++;
+        }
+    }
+
+    /**
      * Checks if the player is suspended in the air. If yes - adjust the gravity
      * accordingly.
      */
     private void playerGravity() {
         mPlayerPoint.set(mPlayerPoint.x, mPlayerPoint.y + (int) mGravity);
-        if (!mAllowedToJump && !mGravityManager.isPlayerNotTouchingFloor(mPlayer, mFloor)) {
+
+        // Si le joueur touche le sol, on le remet juste sur le sol (pas plus bas)
+        int solY = Constants.SCREEN_HEIGHT - 300 - 10;
+        if (mPlayerPoint.y > solY) {
+            mPlayerPoint.y = solY;
             mGravity = 0;
             mIsJumping = false;
             mDoubleJumpAvailable = true;
-            mPlayerPoint.set(mPlayerPoint.x, Constants.SCREEN_HEIGHT - 120);
         } else if (mIsJumping && mGravity < 0) {
-            mGravity += 1;
+            mGravity += 1.3;
         } else if (mIsJumping && mGravity < GRAVITY_THRESHOLD) {
-            mGravity += 1.5f;
+            mGravity += 1.8f;
         }
-
     }
 
     /**
@@ -127,10 +143,10 @@ public class GamePlayScene implements IScene {
     @Override
     public void draw(Canvas canvas) {
         canvas.drawColor(Color.parseColor("#e5faff"));
-        // mCloudManager.draw(canvas);
 
         mFloor.draw(canvas);
         mObstacleManager.draw(canvas);
+        mBirdManager.draw(canvas); // NOUVEAU - Dessine les oiseaux
         mPlayer.draw(canvas);
 
         mPauseButton.draw(canvas, mIsPaused);
@@ -144,13 +160,13 @@ public class GamePlayScene implements IScene {
             paint.setTextSize(100);
             paint.setColor(Color.WHITE);
             paint.setShadowLayer(5, 0, 0, Color.BLACK);
-            drawCenterText(canvas, paint, "Game over!", "Score: " + mScore);
+            drawCenterText(canvas, paint, "Perdu !", "Score: " + mScore);
         }
     }
 
     /**
      * Draws the score on the screen.
-     * 
+     *
      * @param canvas
      * @param paint
      */
@@ -190,13 +206,31 @@ public class GamePlayScene implements IScene {
     private void newGame() {
         mGravityManager = new GravityManager();
         mObstacleManager = new ObstacleManager(300, 100, 100, Color.BLUE);
-        mHealthManager = new HealthManager();
-        mCloudManager = new CloudManager();
 
+        // NOUVEAU - Initialisation du BirdManager
+        mBirdManager = new BirdManager(
+                800, // Gap entre les oiseaux
+                60, // Hauteur des oiseaux
+                80, // Largeur des oiseaux
+                Color.RED // Couleur (temporaire, l'image sera utilisée)
+        );
+
+        mHealthManager = new HealthManager();
         mPauseButton = new PauseButton();
 
-        mPlayer = new Player(new Rect(0, 0, 100, 100), Color.BLACK);
-        mPlayerPoint = new Point(X_POSITION, Constants.SCREEN_HEIGHT / 2);
+        int playerWidth = 100;
+        int playerHeight = 100;
+
+        // MODIFICATION : Position Y du joueur ajustée pour être sur la route
+        int playerY = Constants.SCREEN_HEIGHT - 300 - playerHeight; // 300 = hauteur de votre route
+
+        mPlayerPoint = new Point(X_POSITION, playerY);
+        Rect playerRect = new Rect(
+                X_POSITION,
+                playerY,
+                X_POSITION + playerWidth,
+                playerY + playerHeight);
+        mPlayer = new Player(playerRect, Color.BLACK);
 
         mFloor = new Floor(new Rect());
 
@@ -219,12 +253,11 @@ public class GamePlayScene implements IScene {
             }
         };
         mScoreTimer = new Timer(true);
-
     }
 
     /**
      * Takes the given text and draws it in the center of the screen.
-     * 
+     *
      * @param canvas
      * @param paint
      * @param textOne

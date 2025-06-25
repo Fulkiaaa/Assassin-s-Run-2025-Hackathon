@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.jeu.endlessrunner">  <!-- ✅ Ton vrai nom de package -->
+    package="com.jeu.endlessrunner">  
 
     <application
         android:allowBackup="true"
@@ -14,7 +14,6 @@
         android:theme="@style/Theme.Jeu_ac_mp4"
         tools:targetApi="31">
 
-        <!-- ✅ Déclaration de l'activité principale -->
         <activity android:name=".Main"
             android:exported="true">
             <intent-filter>

@@ -17,7 +17,7 @@ public class Menu implements IScene {
 
     private Rect mTextRect;
 
-    public Menu(){
+    public Menu() {
         mFloor = new Floor(new Rect());
         mTextRect = new Rect();
     }
@@ -31,7 +31,7 @@ public class Menu implements IScene {
     public void draw(Canvas canvas) {
         canvas.drawColor(Color.parseColor("#e5faff"));
         mFloor.draw(canvas);
-        drawText(canvas, "Assasins Creed Runner", "Tapez pour commencer");
+        drawText(canvas, "Assassins Runner", "Tapez pour commencer");
     }
 
     @Override
@@ -41,15 +41,15 @@ public class Menu implements IScene {
 
     @Override
     public void recieveTouch(MotionEvent event) {
-        switch (event.getAction()){
-            case MotionEvent.ACTION_DOWN:{
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN: {
                 SceneManager.ACTIVE_SCENE = Constants.GAME_SCENE;
                 break;
             }
         }
     }
 
-    private void drawText(Canvas canvas, String headLine, String text){
+    private void drawText(Canvas canvas, String headLine, String text) {
         Paint paint = new Paint();
         paint.setTextSize(200);
         paint.setColor(Color.BLUE);
