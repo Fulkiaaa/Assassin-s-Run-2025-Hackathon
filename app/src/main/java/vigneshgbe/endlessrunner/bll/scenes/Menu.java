@@ -31,7 +31,7 @@ public class Menu implements IScene {
     public void draw(Canvas canvas) {
         canvas.drawColor(Color.parseColor("#e5faff"));
         mFloor.draw(canvas);
-        drawText(canvas, "Silent Step", "Tape pour jouer ");
+        drawText(canvas, "Silent Step", "Tapez pour jouer ");
     }
 
     @Override
