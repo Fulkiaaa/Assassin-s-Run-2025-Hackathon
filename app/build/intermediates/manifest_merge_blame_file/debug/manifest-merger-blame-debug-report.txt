@@ -1,0 +1,187 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="vigneshgbe.endlessrunner"
+4    android:versionCode="1"
+5    android:versionName="6.1.7.4" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:22:5-67
+11-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:22:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:23:5-79
+12-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:23:22-76
+13    <uses-permission android:name="android.permission.WAKE_LOCK" />
+13-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:24:5-68
+13-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:24:22-65
+14    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+14-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:25:5-79
+14-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:25:22-76
+15    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" />
+15-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:26:5-88
+15-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:26:22-85
+16    <uses-permission android:name="android.permission.ACCESS_ADSERVICES_AD_ID" />
+16-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:27:5-82
+16-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:27:22-79
+17    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+17-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:26:5-110
+17-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:26:22-107
+18
+19    <permission
+19-->[androidx.core:core:1.9.0] C:\Users\clara\.gradle\caches\8.12\transforms\6743cb5246d222a263a575759be8a733\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+20        android:name="vigneshgbe.endlessrunner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+20-->[androidx.core:core:1.9.0] C:\Users\clara\.gradle\caches\8.12\transforms\6743cb5246d222a263a575759be8a733\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+21        android:protectionLevel="signature" />
+21-->[androidx.core:core:1.9.0] C:\Users\clara\.gradle\caches\8.12\transforms\6743cb5246d222a263a575759be8a733\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+22
+23    <uses-permission android:name="vigneshgbe.endlessrunner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+23-->[androidx.core:core:1.9.0] C:\Users\clara\.gradle\caches\8.12\transforms\6743cb5246d222a263a575759be8a733\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+23-->[androidx.core:core:1.9.0] C:\Users\clara\.gradle\caches\8.12\transforms\6743cb5246d222a263a575759be8a733\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+24
+25    <application
+25-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:5:5-21:19
+26        android:allowBackup="true"
+26-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:6:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.9.0] C:\Users\clara\.gradle\caches\8.12\transforms\6743cb5246d222a263a575759be8a733\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="true"
+30        android:icon="@mipmap/ic_launcher"
+30-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:7:9-43
+31        android:label="@string/app_name"
+31-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:8:9-41
+32        android:supportsRtl="true"
+32-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:9:9-35
+33        android:testOnly="true"
+34        android:theme="@style/AppTheme" >
+34-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:10:9-40
+35        <activity
+35-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:11:9-20:20
+36            android:name="vigneshgbe.endlessrunner.Main"
+36-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:11:19-63
+37            android:configChanges="orientation|keyboardHidden"
+37-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:13:13-63
+38            android:exported="true"
+38-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:14:13-36
+39            android:screenOrientation="landscape" >
+39-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:12:13-50
+40            <intent-filter>
+40-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:15:13-19:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:16:17-68
+41-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:16:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:18:17-76
+43-->C:\Users\clara\Downloads\Endless-Runner-main\app\src\main\AndroidManifest.xml:18:27-74
+44            </intent-filter>
+45        </activity>
+46
+47        <property
+47-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:30:9-32:61
+48            android:name="android.adservices.AD_SERVICES_CONFIG"
+48-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:31:13-65
+49            android:resource="@xml/ga_ad_services_config" />
+49-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:32:13-58
+50
+51        <service
+51-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:34:9-40:19
+52            android:name="com.google.firebase.components.ComponentDiscoveryService"
+52-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:35:13-84
+53            android:directBootAware="true"
+53-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+54            android:exported="false" >
+54-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:36:13-37
+55            <meta-data
+55-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:37:13-39:85
+56                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+56-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:38:17-139
+57                android:value="com.google.firebase.components.ComponentRegistrar" />
+57-->[com.google.android.gms:play-services-measurement-api:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\f80493d9d8bf3458b709c2dca665d0ab\transformed\jetified-play-services-measurement-api-21.5.0\AndroidManifest.xml:39:17-82
+58            <meta-data
+58-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\clara\.gradle\caches\8.12\transforms\9d707da6e867e79ce4426b759be8d0af\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:15:13-17:85
+59                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+59-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\clara\.gradle\caches\8.12\transforms\9d707da6e867e79ce4426b759be8d0af\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:16:17-130
+60                android:value="com.google.firebase.components.ComponentRegistrar" />
+60-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\clara\.gradle\caches\8.12\transforms\9d707da6e867e79ce4426b759be8d0af\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:17:17-82
+61            <meta-data
+61-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\clara\.gradle\caches\8.12\transforms\9d707da6e867e79ce4426b759be8d0af\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:18:13-20:85
+62                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+62-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\clara\.gradle\caches\8.12\transforms\9d707da6e867e79ce4426b759be8d0af\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:19:17-127
+63                android:value="com.google.firebase.components.ComponentRegistrar" />
+63-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\clara\.gradle\caches\8.12\transforms\9d707da6e867e79ce4426b759be8d0af\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:20:17-82
+64            <meta-data
+64-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\854e9d03f8267fa7ea4cbf231c86ae3f\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+65                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+65-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\854e9d03f8267fa7ea4cbf231c86ae3f\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+66                android:value="com.google.firebase.components.ComponentRegistrar" />
+66-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\854e9d03f8267fa7ea4cbf231c86ae3f\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+67            <meta-data
+67-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+68                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+68-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+69                android:value="com.google.firebase.components.ComponentRegistrar" />
+69-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+70        </service>
+71
+72        <provider
+72-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+73            android:name="com.google.firebase.provider.FirebaseInitProvider"
+73-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+74            android:authorities="vigneshgbe.endlessrunner.firebaseinitprovider"
+74-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+75            android:directBootAware="true"
+75-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+76            android:exported="false"
+76-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+77            android:initOrder="100" />
+77-->[com.google.firebase:firebase-common:20.4.2] C:\Users\clara\.gradle\caches\8.12\transforms\113e4cf17dc7ea77fda80add0016d9ba\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+78
+79        <receiver
+79-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:29:9-33:20
+80            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+80-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:30:13-85
+81            android:enabled="true"
+81-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:31:13-35
+82            android:exported="false" >
+82-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:32:13-37
+83        </receiver>
+84
+85        <service
+85-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:35:9-38:40
+86            android:name="com.google.android.gms.measurement.AppMeasurementService"
+86-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:36:13-84
+87            android:enabled="true"
+87-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:37:13-35
+88            android:exported="false" />
+88-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:38:13-37
+89        <service
+89-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:39:9-43:72
+90            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+90-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:40:13-87
+91            android:enabled="true"
+91-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:41:13-35
+92            android:exported="false"
+92-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:42:13-37
+93            android:permission="android.permission.BIND_JOB_SERVICE" />
+93-->[com.google.android.gms:play-services-measurement:21.5.0] C:\Users\clara\.gradle\caches\8.12\transforms\7164cee98ee9301db080a7afd434f269\transformed\jetified-play-services-measurement-21.5.0\AndroidManifest.xml:43:13-69
+94
+95        <uses-library
+95-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\clara\.gradle\caches\8.12\transforms\b3f448da3d8d97f20c5b5e609b631b95\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:23:9-25:40
+96            android:name="android.ext.adservices"
+96-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\clara\.gradle\caches\8.12\transforms\b3f448da3d8d97f20c5b5e609b631b95\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:24:13-50
+97            android:required="false" />
+97-->[androidx.privacysandbox.ads:ads-adservices:1.0.0-beta05] C:\Users\clara\.gradle\caches\8.12\transforms\b3f448da3d8d97f20c5b5e609b631b95\transformed\jetified-ads-adservices-1.0.0-beta05\AndroidManifest.xml:25:13-37
+98
+99        <meta-data
+99-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\clara\.gradle\caches\8.12\transforms\61fea9c81cf311786940dceb70938f9e\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+100            android:name="com.google.android.gms.version"
+100-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\clara\.gradle\caches\8.12\transforms\61fea9c81cf311786940dceb70938f9e\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+101            android:value="@integer/google_play_services_version" />
+101-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\clara\.gradle\caches\8.12\transforms\61fea9c81cf311786940dceb70938f9e\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+102    </application>
+103
+104</manifest>

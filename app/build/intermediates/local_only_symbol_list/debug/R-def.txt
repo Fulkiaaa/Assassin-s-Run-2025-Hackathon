@@ -1,0 +1,32 @@
+R_DEF: Internal format may change without notice
+local
+color colorAccent
+color colorPrimary
+color colorPrimaryDark
+color ic_launcher_background
+drawable assassin_double_jumping
+drawable assassin_jumping
+drawable assassin_run_1
+drawable assassin_run_2
+drawable assassin_run_3
+drawable assassin_running_back
+drawable assassin_statique
+drawable background
+drawable background1
+drawable bird
+drawable bird2
+drawable dagger
+drawable pause
+drawable play
+drawable route
+drawable singlegate
+drawable singlegate1
+drawable singlegate2
+drawable templar
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher2
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
+string app_name
+style AppTheme
