@@ -644,6 +644,7 @@ int drawable assassin_running_back 0x7f060071
 int drawable assassin_statique 0x7f060059
 int drawable background 0x7f06005a
 int drawable background1 0x7f060077
+int drawable background3 0x7f060076
 int drawable bird 0x7f06005b
 int drawable bird2 0x7f06005c
 int drawable dagger 0x7f06005d

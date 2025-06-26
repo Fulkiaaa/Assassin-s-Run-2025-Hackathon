@@ -13,6 +13,7 @@ drawable assassin_running_back
 drawable assassin_statique
 drawable background
 drawable background1
+drawable background3
 drawable bird
 drawable bird2
 drawable dagger
