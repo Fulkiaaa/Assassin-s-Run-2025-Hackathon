@@ -1,4 +1,4 @@
-vigneshgbe.endlessrunner
+jeu.endlessrunner
 anim abc_fade_in
 anim abc_fade_out
 anim abc_grow_fade_in_from_bottom
@@ -912,6 +912,7 @@ mipmap ic_launcher2
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 raw firebase_common_keep
+raw musique_assassin
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

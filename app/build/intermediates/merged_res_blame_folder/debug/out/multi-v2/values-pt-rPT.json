@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "vigneshgbe.endlessrunner.app-mergeDebugResources-14:/values-pt-rPT/values-pt-rPT.xml",
+            "outputFile": "jeu.endlessrunner.app-mergeDebugResources-14:/values-pt-rPT/values-pt-rPT.xml",
             "map": [
                 {
                     "source": "C:\\Users\\clara\\.gradle\\caches\\8.12\\transforms\\61fea9c81cf311786940dceb70938f9e\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-pt-rPT\\values.xml",

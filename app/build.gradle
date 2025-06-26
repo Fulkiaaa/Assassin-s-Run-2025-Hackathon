@@ -4,13 +4,13 @@ android {
     compileSdk 34
     buildToolsVersion '33.0.2'
     defaultConfig {
-        applicationId "vigneshgbe.endlessrunner"
+        applicationId "jeu.endlessrunner"
         minSdk 19
         //noinspection EditedTargetSdkVersion
         targetSdk 34
         versionCode 1
         versionName "6.1.7.4"
-        namespace 'vigneshgbe.endlessrunner'
+        namespace 'jeu.endlessrunner'
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="vigneshgbe.endlessrunner"
+    package="jeu.endlessrunner"
     android:versionCode="1"
     android:versionName="6.1.7.4" >
 
@@ -17,10 +17,10 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <permission
-        android:name="vigneshgbe.endlessrunner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:name="jeu.endlessrunner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="vigneshgbe.endlessrunner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+    <uses-permission android:name="jeu.endlessrunner.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -33,7 +33,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="vigneshgbe.endlessrunner.Main"
+            android:name="jeu.endlessrunner.Main"
             android:configChanges="orientation|keyboardHidden"
             android:exported="true"
             android:screenOrientation="landscape" >
@@ -71,7 +71,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="vigneshgbe.endlessrunner.firebaseinitprovider"
+            android:authorities="jeu.endlessrunner.firebaseinitprovider"
             android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />

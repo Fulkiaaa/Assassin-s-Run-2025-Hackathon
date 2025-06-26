@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "vigneshgbe.endlessrunner.app-mergeDebugResources-14:/values/values.xml",
+            "outputFile": "jeu.endlessrunner.app-mergeDebugResources-14:/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\clara\\Downloads\\Endless-Runner-main\\app\\src\\main\\res\\values\\colors.xml",
+                    "source": "C:\\Users\\clara\\Downloads\\jeu\\jeu_ac_mp4-main\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
                     "from": {
-                        "startLines": "4,2,3",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "153,55,102",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "194,97,148"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
                     },
                     "to": {
-                        "startLines": "156,157,158",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "7891,7937,7984",
-                        "endColumns": "45,46,50",
-                        "endOffsets": "7932,7979,8030"
+                        "startLines": "169",
+                        "startColumns": "4",
+                        "startOffsets": "8716",
+                        "endColumns": "56",
+                        "endOffsets": "8768"
                     }
                 },
                 {
@@ -95,7 +95,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\clara\\Downloads\\Endless-Runner-main\\app\\src\\main\\res\\values\\styles.xml",
+                    "source": "C:\\Users\\clara\\Downloads\\jeu\\jeu_ac_mp4-main\\app\\src\\main\\res\\values\\colors.xml",
+                    "from": {
+                        "startLines": "4,2,3",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "153,55,102",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "194,97,148"
+                    },
+                    "to": {
+                        "startLines": "156,157,158",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "7891,7937,7984",
+                        "endColumns": "45,46,50",
+                        "endOffsets": "7932,7979,8030"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\clara\\Downloads\\jeu\\jeu_ac_mp4-main\\app\\src\\main\\res\\values\\styles.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -131,7 +148,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\clara\\Downloads\\Endless-Runner-main\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "C:\\Users\\clara\\Downloads\\jeu\\jeu_ac_mp4-main\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -145,23 +162,6 @@
                         "startOffsets": "25450",
                         "endColumns": "52",
                         "endOffsets": "25498"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\clara\\Downloads\\Endless-Runner-main\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "56",
-                        "endOffsets": "109"
-                    },
-                    "to": {
-                        "startLines": "169",
-                        "startColumns": "4",
-                        "startOffsets": "8716",
-                        "endColumns": "56",
-                        "endOffsets": "8768"
                     }
                 },
                 {
