@@ -29,7 +29,7 @@ public class Menu implements IScene {
 
     @Override
     public void draw(Canvas canvas) {
-        canvas.drawColor(Color.parseColor("#e5faff"));
+        canvas.drawColor(Color.parseColor("#2A3F94"));
         mFloor.draw(canvas);
         drawText(canvas, "Assassin's run", "Tapez pour jouer ");
     }
@@ -52,7 +52,7 @@ public class Menu implements IScene {
     private void drawText(Canvas canvas, String headLine, String text) {
         Paint paint = new Paint();
         paint.setTextSize(200);
-        paint.setColor(Color.BLUE);
+        paint.setColor(Color.parseColor("#C9161D"));
         paint.setShadowLayer(5, 0, 0, Color.BLACK);
 
         paint.setTextAlign(Paint.Align.CENTER);
