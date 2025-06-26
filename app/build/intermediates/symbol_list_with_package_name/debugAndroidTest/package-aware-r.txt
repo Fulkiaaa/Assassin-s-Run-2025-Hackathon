@@ -1,1 +1,1 @@
-vigneshgbe.endlessrunner.test
+jeu.endlessrunner.test

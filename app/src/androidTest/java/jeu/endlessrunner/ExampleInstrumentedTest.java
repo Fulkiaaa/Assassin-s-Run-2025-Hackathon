@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("vigneshgbe.endlessrunner", appContext.getPackageName());
+        assertEquals("jeu.endlessrunner", appContext.getPackageName());
     }
 }
