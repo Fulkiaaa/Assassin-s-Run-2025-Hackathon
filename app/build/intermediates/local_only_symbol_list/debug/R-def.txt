@@ -20,9 +20,8 @@ drawable pause
 drawable play
 drawable route
 drawable singlegate
-drawable singlegate1
-drawable singlegate2
 drawable templar
+font cinzel
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher2

@@ -663,11 +663,10 @@ int drawable pause 0x7f06006a
 int drawable play 0x7f06006b
 int drawable route 0x7f06006c
 int drawable singlegate 0x7f06006d
-int drawable singlegate1 0x7f060073
-int drawable singlegate2 0x7f060074
 int drawable templar 0x7f06006e
 int drawable tooltip_frame_dark 0x7f06006f
 int drawable tooltip_frame_light 0x7f060070
+int font cinzel 0x7f100000
 int id ALT 0x7f070000
 int id CTRL 0x7f070001
 int id FUNCTION 0x7f070002
