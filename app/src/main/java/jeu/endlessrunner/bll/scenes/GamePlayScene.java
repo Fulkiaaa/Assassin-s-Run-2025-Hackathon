@@ -1,5 +1,6 @@
 package jeu.endlessrunner.bll.scenes;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -7,8 +8,10 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.Rect;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.view.MotionEvent;
+import androidx.core.content.res.ResourcesCompat;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -58,8 +61,15 @@ public class GamePlayScene implements IScene {
     private long mLevel3MessageStartTime = 0;
 
     private MediaPlayer mMediaPlayer;
+    private Context mContext;
+    private Typeface mCinzelFont;
 
-    public GamePlayScene() {
+    public GamePlayScene(Context context) {
+        mContext = context;
+
+        // Charger la police personnalisée
+        mCinzelFont = ResourcesCompat.getFont(context, R.font.cinzel);
+
         newGame();
         mTextRect = new Rect();
         Bitmap bgBitmap = BitmapFactory.decodeResource(Constants.CURRENT_CONTEXT.getResources(), R.drawable.background);
@@ -75,7 +85,8 @@ public class GamePlayScene implements IScene {
 
             if (mScore >= 15) {
                 mBirdManager.update();
-                if (mBirdManager.checkCollision(mPlayer.getRect())) mAmountOfDamage++;
+                if (mBirdManager.checkCollision(mPlayer.getRect()))
+                    mAmountOfDamage++;
                 if (mScore == 15 && !mShowLevel2Message) {
                     mShowLevel2Message = true;
                     mLevel2MessageStartTime = System.currentTimeMillis();
@@ -96,7 +107,8 @@ public class GamePlayScene implements IScene {
             checkCollisionObstacle();
             mObstacleManager.update();
 
-            if (mHealthManager.update(mAmountOfDamage)) mGameOver = true;
+            if (mHealthManager.update(mAmountOfDamage))
+                mGameOver = true;
 
             if (!mIsTimerStarted) {
                 mScoreTimer.scheduleAtFixedRate(mScoreTimerTask, UPDATE_TIMER_INTERVAL, UPDATE_TIMER_INTERVAL);
@@ -106,7 +118,8 @@ public class GamePlayScene implements IScene {
     }
 
     private void checkCollisionObstacle() {
-        if (mObstacleManager.collisionWithPlayer(mPlayer.getRect())) mAmountOfDamage++;
+        if (mObstacleManager.collisionWithPlayer(mPlayer.getRect()))
+            mAmountOfDamage++;
     }
 
     private void playerGravity() {
@@ -139,23 +152,33 @@ public class GamePlayScene implements IScene {
         mFloor.draw(canvas);
         mObstacleManager.draw(canvas);
 
-        if (mScore >= 15) mBirdManager.draw(canvas);
-        if (mScore >= 30) mTemplarManager.draw(canvas);
+        if (mScore >= 15)
+            mBirdManager.draw(canvas);
+        if (mScore >= 30)
+            mTemplarManager.draw(canvas);
 
         mPlayer.draw(canvas);
         mPauseButton.draw(canvas, mIsPaused);
 
         Paint paint = new Paint();
+        // Appliquer la police personnalisée
+        if (mCinzelFont != null) {
+            paint.setTypeface(mCinzelFont);
+        }
+        paint.setAntiAlias(true);
+
         drawScore(canvas, paint);
         mHealthManager.draw(canvas);
 
         if (mShowLevel2Message && System.currentTimeMillis() - mLevel2MessageStartTime < 1000)
             drawLevelMessage(canvas, "Niveau 2 - attention aux oiseaux", Color.YELLOW);
-        else mShowLevel2Message = false;
+        else
+            mShowLevel2Message = false;
 
         if (mShowLevel3Message && System.currentTimeMillis() - mLevel3MessageStartTime < 1000)
             drawLevelMessage(canvas, "Niveau 3 - attention aux templiers", Color.RED);
-        else mShowLevel3Message = false;
+        else
+            mShowLevel3Message = false;
 
         if (mGameOver) {
             paint.setTextSize(100);
@@ -167,6 +190,11 @@ public class GamePlayScene implements IScene {
 
     private void drawLevelMessage(Canvas canvas, String text, int color) {
         Paint msgPaint = new Paint();
+        // Appliquer la police personnalisée aux messages de niveau
+        if (mCinzelFont != null) {
+            msgPaint.setTypeface(mCinzelFont);
+        }
+        msgPaint.setAntiAlias(true);
         msgPaint.setColor(color);
         msgPaint.setTextSize(80);
         msgPaint.setTextAlign(Paint.Align.CENTER);
@@ -237,7 +265,8 @@ public class GamePlayScene implements IScene {
         mScoreTimerTask = new TimerTask() {
             @Override
             public void run() {
-                if (!mGameOver && !mIsPaused) mScore++;
+                if (!mGameOver && !mIsPaused)
+                    mScore++;
             }
         };
         mScoreTimer = new Timer(true);
@@ -245,9 +274,8 @@ public class GamePlayScene implements IScene {
         // Musique de fond
         mMediaPlayer = MediaPlayer.create(Constants.CURRENT_CONTEXT, R.raw.musique_assassin);
         mMediaPlayer.setLooping(true);
-        mMediaPlayer.setVolume(0.5f, 0.5f); // Volume réduit à 20% gauche/droite
+        mMediaPlayer.setVolume(0.5f, 0.5f); // Volume réduit à 50% gauche/droite
         mMediaPlayer.start();
-
     }
 
     private void drawCenterText(Canvas canvas, Paint paint, String textOne, String textTwo) {

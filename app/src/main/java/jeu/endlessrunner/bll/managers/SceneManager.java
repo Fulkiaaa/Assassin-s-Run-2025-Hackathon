@@ -1,5 +1,6 @@
 package jeu.endlessrunner.bll.managers;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.view.MotionEvent;
 
@@ -17,22 +18,27 @@ public class SceneManager {
 
     private List<IScene> mScenes = new ArrayList<>();
 
-
-    public SceneManager(){
+    public SceneManager(Context context) {
         ACTIVE_SCENE = Constants.MENU_SCENE;
-        mScenes.add(new Menu());
-        mScenes.add(new GamePlayScene());
+        mScenes.add(new Menu(context));
+        mScenes.add(new GamePlayScene(context));
     }
 
-    public void update(){
+    public void update() {
         mScenes.get(ACTIVE_SCENE).update();
     }
 
-    public void draw(Canvas canvas){
+    public void draw(Canvas canvas) {
         mScenes.get(ACTIVE_SCENE).draw(canvas);
     }
 
-    public void receiveTouch(MotionEvent event){
+    public void receiveTouch(MotionEvent event) {
         mScenes.get(ACTIVE_SCENE).recieveTouch(event);
+    }
+
+    public void terminate() {
+        for (IScene scene : mScenes) {
+            scene.terminate();
+        }
     }
 }
