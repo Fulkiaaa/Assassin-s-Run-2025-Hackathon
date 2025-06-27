@@ -38,8 +38,3 @@ _(Ajoutez ici des captures d’écran du jeu)_
 - `bll/` : Logique du jeu (managers, animation, scènes)
 - `gui/` : GamePanel et affichage
 - `res/` : Ressources (images, polices, sons)
-
-## Crédits
-
-- Jeu et code : [Votre nom ou pseudo]
-- Assets : [Sources des images, sons, polices si besoin]
