@@ -49,7 +49,7 @@ public class TemplarManager implements IGameObject {
     private void populateTemplars() {
         int templarWidth = 100;
         int templarHeight = 120;
-        int groundY = mFloor.getRect().top - templarHeight + 10; // Ajustement pour la hauteur du sol
+        int groundY = mFloor.getRect().top - templarHeight + 20; // Ajustement pour la hauteur du sol
 
         int currX = 3 * Constants.SCREEN_WIDTH / 2;
 
@@ -88,7 +88,7 @@ public class TemplarManager implements IGameObject {
             if (lastTemplar.getRect().right < 4 * Constants.SCREEN_WIDTH) {
                 int templarWidth = 100;
                 int templarHeight = 120;
-                int groundY = mFloor.getRect().top - templarHeight + 10;
+                int groundY = mFloor.getRect().top - templarHeight + 20;
                 int randomOffset = random.nextInt(TEMPLAR_GAP / 2);
 
                 Templar newTemplar = new Templar(
@@ -112,7 +112,7 @@ public class TemplarManager implements IGameObject {
                     int daggerX = rect.left;
 
                     daggers.add(new Dagger(
-                            new Rect(daggerX, daggerY, daggerX + 40, daggerY + 20),
+                            new Rect(daggerX, daggerY, daggerX + 40, daggerY + 50),
                             daggerImage,
                             25));
                 }
