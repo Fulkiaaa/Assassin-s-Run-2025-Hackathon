@@ -27,8 +27,7 @@ public class Menu implements IScene {
         mFloor = new Floor(new Rect());
         mTextRect = new Rect();
 
-        // Charger la police personnalisée depuis res/font/
-        mCinzelFont = ResourcesCompat.getFont(context, R.font.cinzel);
+        mCinzelFont = ResourcesCompat.getFont(context, R.font.vcr_osd_mono);
     }
 
     @Override

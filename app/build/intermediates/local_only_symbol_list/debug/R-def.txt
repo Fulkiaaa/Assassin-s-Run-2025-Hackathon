@@ -23,6 +23,7 @@ drawable route
 drawable singlegate
 drawable templar
 font cinzel
+font vcr_osd_mono
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher2

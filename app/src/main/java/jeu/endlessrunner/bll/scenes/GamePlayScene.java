@@ -68,7 +68,7 @@ public class GamePlayScene implements IScene {
         mContext = context;
 
         // Charger la police personnalisée
-        mCinzelFont = ResourcesCompat.getFont(context, R.font.cinzel);
+        mCinzelFont = ResourcesCompat.getFont(context, R.font.vcr_osd_mono);
 
         newGame();
         mTextRect = new Rect();

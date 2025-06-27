@@ -669,6 +669,7 @@ drawable templar
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 font cinzel
+font vcr_osd_mono
 id ALT
 id CTRL
 id FUNCTION

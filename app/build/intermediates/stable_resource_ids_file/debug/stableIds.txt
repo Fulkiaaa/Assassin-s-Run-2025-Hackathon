@@ -1007,6 +1007,7 @@ jeu.endlessrunner:dimen/abc_text_size_menu_material = 0x7f050045
 jeu.endlessrunner:attr/actionBarStyle = 0x7f020005
 jeu.endlessrunner:style/Theme.AppCompat.Dialog.Alert = 0x7f0e00fe
 jeu.endlessrunner:attr/textColorSearchUrl = 0x7f020124
+jeu.endlessrunner:font/vcr_osd_mono = 0x7f070001
 jeu.endlessrunner:attr/actionOverflowButtonStyle = 0x7f02001d
 jeu.endlessrunner:attr/layout_constraintVertical_bias = 0x7f0200be
 jeu.endlessrunner:attr/layout_constraintStart_toStartOf = 0x7f0200ba

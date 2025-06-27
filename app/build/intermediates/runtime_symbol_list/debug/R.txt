@@ -668,6 +668,7 @@ int drawable templar 0x7f060071
 int drawable tooltip_frame_dark 0x7f060072
 int drawable tooltip_frame_light 0x7f060073
 int font cinzel 0x7f070000
+int font vcr_osd_mono 0x7f070001
 int id ALT 0x7f080000
 int id CTRL 0x7f080001
 int id FUNCTION 0x7f080002
