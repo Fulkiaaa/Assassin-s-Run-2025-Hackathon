@@ -1228,6 +1228,8 @@ int style ThemeOverlay_AppCompat_Dark_ActionBar 0x7f0e010c
 int style ThemeOverlay_AppCompat_Dialog 0x7f0e010d
 int style ThemeOverlay_AppCompat_Dialog_Alert 0x7f0e010e
 int style ThemeOverlay_AppCompat_Light 0x7f0e010f
+int style WhiteBackgroundDialogTheme 0x7f0e015b
+int style WhiteBackgroundTheme 0x7f0e015c
 int style Widget_AppCompat_ActionBar 0x7f0e0110
 int style Widget_AppCompat_ActionBar_Solid 0x7f0e0111
 int style Widget_AppCompat_ActionBar_TabBar 0x7f0e0112

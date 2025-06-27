@@ -1,134 +1,130 @@
 [
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_play.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\play.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_assassin_statique.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/assassin_statique.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_assassin_jumping.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\assassin_jumping.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_background3.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/background3.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_singlegate.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\singlegate.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_route.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\route.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/layout_activity_main.xml.flat",
+        "source": "jeu.endlessrunner.app-main-20:/layout/activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-mdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-mdpi\\ic_launcher_foreground.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/font_cinzel.ttf.flat",
+        "source": "jeu.endlessrunner.app-main-20:/font/cinzel.ttf"
     },
     {
-        "merged": "jeu.endlessrunner.app-merged_res-16:/font_vcr_osd_mono.ttf.flat",
-        "source": "jeu.endlessrunner.app-main-18:/font/vcr_osd_mono.ttf"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_play.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/play.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_pause.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\pause.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_dagger.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/dagger.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_assassin_statique.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\assassin_statique.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/font_vcr_osd_mono.ttf.flat",
+        "source": "jeu.endlessrunner.app-main-20:/font/vcr_osd_mono.ttf"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_templar.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\templar.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-hdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_route.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/route.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_background.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\background.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_assassin_double_jumping.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/assassin_double_jumping.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-hdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-hdpi\\ic_launcher_foreground.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_background1.jpg.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\background1.jpg"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_bird2.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\bird2.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\font_cinzel.ttf.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\font\\cinzel.ttf"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-xhdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\raw_musique_assassin.mp3.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\raw\\musique_assassin.mp3"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_assassin_run_2.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/assassin_run_2.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_assassin_running_back.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\assassin_running_back.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_bird2.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/bird2.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_assassin_run_3.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\assassin_run_3.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_bird.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/bird.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_assassin_run_1.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\assassin_run_1.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/raw_musique_assassin.mp3.flat",
+        "source": "jeu.endlessrunner.app-main-20:/raw/musique_assassin.mp3"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_background3.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\background3.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_background1.jpg.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/background1.jpg"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_background.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/background.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-xhdpi_ic_launcher_foreground.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-xhdpi\\ic_launcher_foreground.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_pause.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/pause.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-hdpi_ic_launcher2.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-hdpi\\ic_launcher2.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_assassin_jumping.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/assassin_jumping.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_dagger.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\dagger.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_assassin_double_jumping.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\assassin_double_jumping.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_assassin_running_back.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/assassin_running_back.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_templar.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/templar.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\font_cinzel.otf.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\font\\cinzel.otf"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-hdpi_ic_launcher2.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-hdpi/ic_launcher2.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\layout\\activity_main.xml"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_singlegate.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/singlegate.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_assassin_run_1.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/assassin_run_1.png"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "jeu.endlessrunner.app-main-20:/mipmap-mdpi/ic_launcher_foreground.webp"
     },
     {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_assassin_run_2.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\assassin_run_2.png"
-    },
-    {
-        "merged": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-merged_res-16:\\drawable_bird.png.flat",
-        "source": "C:\\Users\\clara\\.gradle\\daemon\\8.12\\jeu.endlessrunner.app-main-18:\\drawable\\bird.png"
+        "merged": "jeu.endlessrunner.app-merged_res-18:/drawable_assassin_run_3.png.flat",
+        "source": "jeu.endlessrunner.app-main-20:/drawable/assassin_run_3.png"
     }
 ]

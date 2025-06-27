@@ -5,85 +5,86 @@ import android.view.SurfaceHolder;
 
 import jeu.endlessrunner.gui.GamePanel;
 
-public class GameLoopThread extends Thread{
+// Thread principal qui gère la boucle de jeu (update/draw à chaque frame)
+public class GameLoopThread extends Thread {
 
-    public static final int MAX_FPS = 30;
-    public static Canvas mCanvas;
+    public static final int MAX_FPS = 30; // Nombre d'images par seconde maximum
+    public static Canvas mCanvas; // Canvas utilisé pour dessiner
 
-    private SurfaceHolder mSurfaceHolder;
-    private GamePanel mGamePanel;
+    private SurfaceHolder mSurfaceHolder; // Permet d'accéder à la surface de dessin
+    private GamePanel mGamePanel; // Référence au panneau de jeu
 
-    private boolean mRunning;
-    private double mAverageFPS;
+    private boolean mRunning; // Indique si la boucle tourne
+    private double mAverageFPS; // FPS moyen (optionnel)
 
-    public GameLoopThread(SurfaceHolder holder, GamePanel gamePanel){
+    public GameLoopThread(SurfaceHolder holder, GamePanel gamePanel) {
         super();
         mSurfaceHolder = holder;
         mGamePanel = gamePanel;
     }
 
-    public void setRunning(boolean running){
+    // Permet d'arrêter ou démarrer la boucle de jeu
+    public void setRunning(boolean running) {
         mRunning = running;
     }
 
-    public void run(){
+    // Boucle principale du jeu : update + draw à chaque frame
+    public void run() {
         long startTime;
         long timeMillis;
         long waitTime;
-        long targetTime = 1000 / MAX_FPS;
+        long targetTime = 1000 / MAX_FPS; // Durée cible d'une frame en ms
 
-        while(mRunning){
+        while (mRunning) {
             startTime = System.nanoTime();
             mCanvas = null;
 
-            //This takes care of keeping our game running.
-            try{
-                //Tries to get hold of the surfaceHolders canvas in a state where it can be edited.
+            // Gère la synchronisation et le dessin sur le canvas
+            try {
+                // Verrouille le canvas pour dessiner dessus
                 mCanvas = mSurfaceHolder.lockCanvas();
-                synchronized (mSurfaceHolder){
-                    //Calls the gamePanel to update and draw thereby continuing the game.
-                    //This is required to be done in synchronized.
+                synchronized (mSurfaceHolder) {
+                    // Met à jour la logique du jeu et dessine la frame
                     mGamePanel.update();
                     mGamePanel.draw(mCanvas);
                 }
-            }catch (Exception ex){
+            } catch (Exception ex) {
                 ex.printStackTrace();
-            }finally {
-                if(mCanvas != null){
-                    try{
-                        //We need to unlock the canvas again else our changes to it won't be shown.
+            } finally {
+                if (mCanvas != null) {
+                    try {
+                        // Déverrouille le canvas et affiche la frame
                         mSurfaceHolder.unlockCanvasAndPost(mCanvas);
-                    }catch (Exception ex){
+                    } catch (Exception ex) {
                         ex.printStackTrace();
                     }
                 }
             }
 
-            //Here we make sure we don't go over our allowed MAX_FPS.
-            //First we find the time in milliseconds since we started this frame.
-            timeMillis = (System.nanoTime() - startTime)/1000000;
-            //We see if the frame finished quicker than we want it to.
+            // Limite le nombre de FPS en dormant si besoin
+            timeMillis = (System.nanoTime() - startTime) / 1000000;
             waitTime = targetTime - timeMillis;
-            try{
-                if(waitTime > 0){
-                    //If it did take longer, we sleep for the remaining time before creating the next frame.
+            try {
+                if (waitTime > 0) {
                     this.sleep(waitTime);
                 }
             } catch (InterruptedException iex) {
                 iex.printStackTrace();
             }
 
-            /*//This is purely for calculating and printing the averageFPS. It's not necessary to make the gameLoop work.
-            int frameCount = 0;
-            long totalTime = 0;
-            totalTime += System.nanoTime() - startTime;
-            frameCount++;
-            if(frameCount == MAX_FPS){
-                mAverageFPS = 1000/((totalTime/frameCount)/1000000);
-                frameCount = 0;
-                totalTime = 0;
-                Log.d("AverageFPS", mAverageFPS + "");
-            }*/
+            /*
+             * // Calcul du FPS moyen (optionnel, pour debug)
+             * int frameCount = 0;
+             * long totalTime = 0;
+             * totalTime += System.nanoTime() - startTime;
+             * frameCount++;
+             * if(frameCount == MAX_FPS){
+             * mAverageFPS = 1000/((totalTime/frameCount)/1000000);
+             * frameCount = 0;
+             * totalTime = 0;
+             * Log.d("AverageFPS", mAverageFPS + "");
+             * }
+             */
         }
     }
 }

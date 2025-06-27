@@ -17,21 +17,23 @@ import jeu.endlessrunner.be.Floor;
 import jeu.endlessrunner.be.IGameObject;
 import jeu.endlessrunner.be.Templar;
 
+// Classe qui gère les templiers ennemis et leurs projectiles (dagues)
 public class TemplarManager implements IGameObject {
-    private List<Templar> templars;
-    private List<Dagger> daggers;
-    private Bitmap templarImage;
-    private Bitmap daggerImage;
-    private long lastShotTime = 0;
+    private List<Templar> templars; // Liste des templiers actifs
+    private List<Dagger> daggers; // Liste des dagues actives
+    private Bitmap templarImage; // Image du templier
+    private Bitmap daggerImage; // Image de la dague
+    private long lastShotTime = 0; // Dernier tir de dague (pour le cooldown)
 
-    private static final int SHOT_INTERVAL = 2000; // ms
-    private static final int TEMPLAR_GAP = 800; // Distance entre templiers
+    private static final int SHOT_INTERVAL = 2000; // Intervalle entre tirs (ms)
+    private static final int TEMPLAR_GAP = 800; // Distance entre deux templiers
     private static final float TEMPLAR_SPEED = 15f;
     private static final float DAGGER_SPEED = 25f;
 
     private Random random;
     private Floor mFloor;
 
+    // Constructeur
     public TemplarManager(Floor floor) {
         templars = new ArrayList<>();
         daggers = new ArrayList<>();
@@ -43,6 +45,7 @@ public class TemplarManager implements IGameObject {
         populateTemplars();
     }
 
+    // Génère les templiers de départ hors de l'écran à droite
     private void populateTemplars() {
         int templarWidth = 100;
         int templarHeight = 120;
@@ -62,9 +65,11 @@ public class TemplarManager implements IGameObject {
         }
     }
 
+    // Met à jour la position des templiers et des dagues, gère les tirs et le
+    // recyclage
     @Override
     public void update() {
-        // Déplacement des templiers
+        // Déplacement des templiers vers la gauche
         for (Templar t : templars) {
             t.getRect().offset(-(int) TEMPLAR_SPEED, 0);
         }
@@ -77,7 +82,7 @@ public class TemplarManager implements IGameObject {
             }
         }
 
-        // Ajout de nouveaux templiers
+        // Ajout de nouveaux templiers si besoin
         if (!templars.isEmpty()) {
             Templar lastTemplar = templars.get(templars.size() - 1);
             if (lastTemplar.getRect().right < 4 * Constants.SCREEN_WIDTH) {
@@ -97,7 +102,7 @@ public class TemplarManager implements IGameObject {
             populateTemplars();
         }
 
-        // Tir de dague multiple (tous les templiers visibles)
+        // Tir de dagues par tous les templiers visibles à l'écran à intervalle régulier
         long now = System.currentTimeMillis();
         if (now - lastShotTime >= SHOT_INTERVAL && !templars.isEmpty()) {
             for (Templar t : templars) {
@@ -115,9 +120,11 @@ public class TemplarManager implements IGameObject {
             lastShotTime = now;
         }
 
+        // Mise à jour des dagues (déplacement, rotation)
         for (Dagger d : daggers)
             d.update();
 
+        // Suppression des dagues sorties de l'écran
         Iterator<Dagger> daggerIt = daggers.iterator();
         while (daggerIt.hasNext()) {
             Dagger d = daggerIt.next();
@@ -127,6 +134,7 @@ public class TemplarManager implements IGameObject {
         }
     }
 
+    // Dessine tous les templiers et dagues sur le canvas
     @Override
     public void draw(Canvas canvas) {
         for (Templar t : templars)
@@ -135,6 +143,8 @@ public class TemplarManager implements IGameObject {
             d.draw(canvas);
     }
 
+    // Vérifie la collision entre le joueur et les dagues ou templiers
+    // Les dagues sont supprimées si elles touchent un obstacle ou le joueur
     public boolean checkCollision(Rect player, List<Rect> obstacles) {
         Iterator<Dagger> daggerIt = daggers.iterator();
         while (daggerIt.hasNext()) {
@@ -159,6 +169,7 @@ public class TemplarManager implements IGameObject {
             }
         }
 
+        // Collision directe entre le joueur et un templier
         for (Templar t : templars) {
             if (Rect.intersects(t.getRect(), player)) {
                 return true;
@@ -168,10 +179,12 @@ public class TemplarManager implements IGameObject {
         return false;
     }
 
+    // Retourne le nombre de templiers actifs
     public int getTemplarCount() {
         return templars.size();
     }
 
+    // Retourne le nombre de dagues actives
     public int getDaggerCount() {
         return daggers.size();
     }

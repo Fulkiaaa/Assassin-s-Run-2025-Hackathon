@@ -25,18 +25,22 @@ import jeu.endlessrunner.be.ScrollingBackground;
 import jeu.endlessrunner.bll.IScene;
 import jeu.endlessrunner.bll.managers.*;
 
+// Classe principale de la scène de jeu (gameplay)
 public class GamePlayScene implements IScene {
 
+    // Constantes pour la position du joueur, la gravité, etc.
     private final int X_POSITION = Constants.SCREEN_WIDTH / 4;
     private final int GRAVITY_THRESHOLD = 20;
     private final int UPDATE_TIMER_INTERVAL = 2000;
 
+    // Gestionnaires de logique de jeu
     private GravityManager mGravityManager;
     private ObstacleManager mObstacleManager;
     private HealthManager mHealthManager;
     private BirdManager mBirdManager;
     private TemplarManager mTemplarManager;
 
+    // Objets du jeu et état
     private Rect mTextRect;
     private PauseButton mPauseButton;
     private Player mPlayer;
@@ -44,6 +48,7 @@ public class GamePlayScene implements IScene {
     private Floor mFloor;
     private ScrollingBackground mBackground;
 
+    // Variables de physique et d'état du joueur
     private float mGravity;
     private boolean mIsJumping;
     private boolean mDoubleJumpAvailable;
@@ -60,10 +65,12 @@ public class GamePlayScene implements IScene {
     private boolean mShowLevel3Message = false;
     private long mLevel3MessageStartTime = 0;
 
+    // Musique et police
     private MediaPlayer mMediaPlayer;
     private Context mContext;
     private Typeface mCinzelFont;
 
+    // Constructeur : initialise la scène de jeu
     public GamePlayScene(Context context) {
         mContext = context;
 
@@ -76,6 +83,7 @@ public class GamePlayScene implements IScene {
         mBackground = new ScrollingBackground(bgBitmap, Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT, 5);
     }
 
+    // Met à jour la logique de la scène à chaque frame
     @Override
     public void update() {
         if (!mGameOver && !mIsPaused) {
@@ -83,6 +91,7 @@ public class GamePlayScene implements IScene {
             mPlayer.update(mPlayerPoint, mIsJumping, !mDoubleJumpAvailable);
             mFloor.update();
 
+            // Niveau 2 : apparition des oiseaux
             if (mScore >= 15) {
                 mBirdManager.update();
                 if (mBirdManager.checkCollision(mPlayer.getRect()))
@@ -93,6 +102,7 @@ public class GamePlayScene implements IScene {
                 }
             }
 
+            // Niveau 3 : apparition des templiers
             if (mScore >= 30) {
                 mTemplarManager.update();
                 if (mTemplarManager.checkCollision(mPlayer.getRect(), mObstacleManager.getObstacleRects()))
@@ -107,9 +117,11 @@ public class GamePlayScene implements IScene {
             checkCollisionObstacle();
             mObstacleManager.update();
 
+            // Met à jour la vie, game over si plus de vie
             if (mHealthManager.update(mAmountOfDamage))
                 mGameOver = true;
 
+            // Démarre le timer de score si ce n'est pas déjà fait
             if (!mIsTimerStarted) {
                 mScoreTimer.scheduleAtFixedRate(mScoreTimerTask, UPDATE_TIMER_INTERVAL, UPDATE_TIMER_INTERVAL);
                 mIsTimerStarted = true;
@@ -117,11 +129,13 @@ public class GamePlayScene implements IScene {
         }
     }
 
+    // Vérifie la collision avec les obstacles
     private void checkCollisionObstacle() {
         if (mObstacleManager.collisionWithPlayer(mPlayer.getRect()))
             mAmountOfDamage++;
     }
 
+    // Gère la gravité et la position verticale du joueur
     private void playerGravity() {
         mPlayerPoint.set(mPlayerPoint.x, mPlayerPoint.y + (int) mGravity);
         if (!mAllowedToJump && !mGravityManager.isPlayerNotTouchingFloor(mPlayer, mFloor)) {
@@ -136,6 +150,7 @@ public class GamePlayScene implements IScene {
         }
     }
 
+    // Gère le saut et le double saut du joueur
     private void jump() {
         if (!mIsJumping) {
             mGravity = -GRAVITY_THRESHOLD;
@@ -146,6 +161,7 @@ public class GamePlayScene implements IScene {
         }
     }
 
+    // Dessine tous les éléments de la scène sur le canvas
     @Override
     public void draw(Canvas canvas) {
         mBackground.draw(canvas);
@@ -170,6 +186,7 @@ public class GamePlayScene implements IScene {
         drawScore(canvas, paint);
         mHealthManager.draw(canvas);
 
+        // Affiche les messages de niveau lors du passage de palier
         if (mShowLevel2Message && System.currentTimeMillis() - mLevel2MessageStartTime < 1000)
             drawLevelMessage(canvas, "Niveau 2 - attention aux oiseaux", Color.YELLOW);
         else
@@ -180,6 +197,7 @@ public class GamePlayScene implements IScene {
         else
             mShowLevel3Message = false;
 
+        // Affiche l'écran de fin si perdu
         if (mGameOver) {
             paint.setTextSize(100);
             paint.setColor(Color.WHITE);
@@ -188,9 +206,9 @@ public class GamePlayScene implements IScene {
         }
     }
 
+    // Affiche un message de niveau au centre de l'écran
     private void drawLevelMessage(Canvas canvas, String text, int color) {
         Paint msgPaint = new Paint();
-        // Appliquer la police personnalisée aux messages de niveau
         if (mCinzelFont != null) {
             msgPaint.setTypeface(mCinzelFont);
         }
@@ -202,6 +220,7 @@ public class GamePlayScene implements IScene {
         canvas.drawText(text, Constants.SCREEN_WIDTH / 2f, Constants.SCREEN_HEIGHT / 2f, msgPaint);
     }
 
+    // Affiche le score en haut à gauche
     private void drawScore(Canvas canvas, Paint paint) {
         paint.setTextSize(100);
         paint.setColor(Color.WHITE);
@@ -209,6 +228,7 @@ public class GamePlayScene implements IScene {
         canvas.drawText("Score: " + mScore, 50, 50 + paint.descent() - paint.ascent(), paint);
     }
 
+    // Libère les ressources à la fin de la scène
     @Override
     public void terminate() {
         if (mMediaPlayer != null) {
@@ -218,6 +238,7 @@ public class GamePlayScene implements IScene {
         }
     }
 
+    // Gère les événements tactiles (pause, saut, relancer, etc.)
     @Override
     public void recieveTouch(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -239,6 +260,7 @@ public class GamePlayScene implements IScene {
         }
     }
 
+    // Réinitialise la partie (nouvelle partie)
     private void newGame() {
         mGravityManager = new GravityManager();
         mFloor = new Floor(new Rect());
@@ -278,6 +300,7 @@ public class GamePlayScene implements IScene {
         mMediaPlayer.start();
     }
 
+    // Affiche deux lignes de texte centrées à l'écran (pour l'écran de fin)
     private void drawCenterText(Canvas canvas, Paint paint, String textOne, String textTwo) {
         paint.setTextAlign(Paint.Align.CENTER);
         canvas.getClipBounds(mTextRect);

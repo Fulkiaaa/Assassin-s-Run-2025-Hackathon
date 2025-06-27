@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "jeu.endlessrunner.app-mergeDebugResources-14:/values-v21/values-v21.xml",
+            "outputFile": "jeu.endlessrunner.app-mergeDebugResources-16:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\clara\\.gradle\\caches\\8.12\\transforms\\6743cb5246d222a263a575759be8a733\\transformed\\core-1.9.0\\res\\values-v21\\values-v21.xml",
@@ -14,12 +14,31 @@
                         "endOffsets": "168,232,299,363,479,605,731,859,1031,1383"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,263,264,265,266,267,270",
+                        "startLines": "2,3,4,5,263,264,265,266,285,288",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,173,237,304,18647,18763,18889,19015,19143,19315",
-                        "endLines": "2,3,4,5,263,264,265,266,269,274",
+                        "startOffsets": "55,173,237,304,18647,18763,18889,19015,20099,20271",
+                        "endLines": "2,3,4,5,263,264,265,266,287,292",
                         "endColumns": "117,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "168,232,299,363,18758,18884,19010,19138,19310,19662"
+                        "endOffsets": "168,232,299,363,18758,18884,19010,19138,20266,20618"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\clara\\.gradle\\caches\\8.12\\transforms\\b3ae90b421566509cbc92f883865a2ac\\transformed\\jetified-core-1.6.1\\res\\values-v21\\values.xml",
+                    "from": {
+                        "startLines": "4,13",
+                        "startColumns": "0,0",
+                        "startOffsets": "146,621",
+                        "endLines": "12,21",
+                        "endColumns": "8,8",
+                        "endOffsets": "620,1093"
+                    },
+                    "to": {
+                        "startLines": "267,276",
+                        "startColumns": "4,4",
+                        "startOffsets": "19143,19622",
+                        "endLines": "275,284",
+                        "endColumns": "8,8",
+                        "endOffsets": "19617,20094"
                     }
                 },
                 {
