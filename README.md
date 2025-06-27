@@ -22,7 +22,7 @@ _(Ajoutez ici des captures d’écran du jeu)_
 
 1. Clonez le dépôt :
    ```
-   git clone https://github.com/ton-utilisateur/endlessrunner.git
+   git clone https://github.com/Fulkiaaa/jeu_ac_mp4.git
    ```
 2. Ouvrez le projet dans **Android Studio**.
 3. Compilez et lancez sur un émulateur ou un appareil Android.
